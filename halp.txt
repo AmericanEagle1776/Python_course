@@ -1,1 +1,0 @@
-go on github webite check out how to use ssh for connecting bc then when u push or commit u dont have to always enter password. also when uv done all that u still need to change adress in .git/config to ssh://git@github.com etc so that itll actually connect via gitt bro have fun 

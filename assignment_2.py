@@ -6,7 +6,7 @@ solution_student = []
 # c = a + b
 # type(c)
 
-solution_student.append(None)
+solution_student.append(int)
 
 # Assignment 02:
 # a = 5
@@ -14,14 +14,14 @@ solution_student.append(None)
 # c = a // b
 # c
 
-solution_student.append(None)
+solution_student.append(2)
 
 # Assignment 03:
 # a = True
 # b = False
 # (a | (a & b))
 
-solution_student.append(None)
+solution_student.append(True)
 
 # Assignment 04:
 # a = 5

@@ -9,7 +9,7 @@ terms of the fourier series and the approximation obtained by the fourier series
 work on the TODOS."""
 
 
-def fourier_rechteck_puls(x, amp=1, depth=5):
+def fourier_rechteck_puls(x, amp=1, depth=2000):
     """
     :param x:
         array like. Used as x values to calculate values of fourier series
@@ -32,8 +32,8 @@ if __name__ == '__main__':
     x_axis = np.linspace(-np.pi, np.pi, 101)
     #x_axis = np.linspace(-2*np.pi, 2*np.pi, 101)
 
-    fig = plt.figure()  # reference to figure object
-    ax = fig.add_subplot(111)  # reference to axis object (this is where you actually plot something)
+    fig = plt.figure(figsize =(10, 25))  # reference to figure object
+    ax = fig.add_subplot(311)  # reference to axis object (this is where you actually plot something)
 
     # TODO: Plot a rectangular pulse, which is 1 if x is between -2 pi and -pi or between 0 and pi and
     #                                         -1 if x is between -pi and 0 or pi and 2 pi
@@ -45,10 +45,19 @@ if __name__ == '__main__':
         else:
             y_axis.append(1)
 
+    ax.set_title('sex.com', fontsize=30 )
     ax.plot(x_axis, y_axis)
 
     fourier_sol = fourier_rechteck_puls(x_axis)
     # TODO: Plot the solution of the fourier series, the sum as well as the single terms.
+
+    axf = fig.add_subplot(312)
+    for x in fourier_sol:
+        axf.plot(x_axis, x)
+    
+    axsum = fig.add_subplot(313)
+    sum = np.sum(fourier_sol, axis = 0)
+    axsum.plot(x_axis, sum)
 
     plt.show()
 
